@@ -2,8 +2,12 @@
 ## Introduction
 
 基于知识图谱和neo4j图数据库的电影知识问答系统
+<div style="display:flex; justify-content: space-around;">
+<img src="https://i.imgs.ovh/2023/12/12/mM4uR.png" alt="image-20231212102658908" style="box-shadow: 0 0 10px rgba(200, 200, 200);" width=30% height:300px/>
+<img src="https://i.imgs.ovh/2023/12/12/mM58p.png" alt="image-20231212102738360" style="box-shadow: 0 0 10px rgba(200, 200, 200);" width=30% height:300px/>
+<img src="https://i.imgs.ovh/2023/12/12/mMdFT.png" alt="image-20231212103113278" style="" width=30% height:300px/>
+</div>
 
-<img src="https://i.imgs.ovh/2023/12/12/mM4uR.png" alt="image-20231212102658908" style="zoom:25%;box-shadow: 0 0 10px rgba(200, 200, 200);" />                    <img src="https://i.imgs.ovh/2023/12/12/mM58p.png" alt="image-20231212102738360" style="zoom:25%;box-shadow: 0 0 10px rgba(200, 200, 200);" />                   <img src="https://i.imgs.ovh/2023/12/12/mMdFT.png" alt="image-20231212103113278" style="zoom: 63.5%;" />
 
 ## Workflow
 
