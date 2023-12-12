@@ -1,0 +1,11 @@
+<!--index.wxml-->
+
+<view class="container">
+    <view class="mainBox">
+        <text class="title">Movie KQGA</text>
+        <image class="botImg" src="/img/bot.png"></image>
+    </view>
+    <view class="StartBox">
+        <text class="loginBtn" bindtap="loginCenterIndex">Start</text>
+    </view>
+</view>

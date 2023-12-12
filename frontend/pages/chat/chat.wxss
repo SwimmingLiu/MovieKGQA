@@ -1,0 +1,292 @@
+/* pages/contact/contact.wxss */
+
+page {
+  background-color: white;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* 在右侧添加阴影效果 */
+}
+.content-wrapper{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: end;
+    
+}
+.zhanwei{
+    width: 100%; 
+    /* height: 75px; */
+    background-color: white;
+}
+scroll-view{
+    /* flex: 1; */
+    max-height: calc(100vh - 100px);
+    /* box-sizing: border-box; */
+}
+.mainBox{
+    /* height: calc(100% - 160rpx); */
+    padding-top: 50rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+.titleBox{
+    height: 300rpx;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid blue; */
+}
+.KG{
+    padding-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    /* border:1px red solid; */
+}
+.GD{
+    padding-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    /* border:1px blue solid; */
+}
+.CB{
+    padding-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    /* border:1px green solid; */
+}
+
+.leftMsg {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: black;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(90deg, #8EC5FC 12%, #E0C3FC 100%);
+  /* 在右侧添加阴影效果 */ 
+  background-clip: padding-box; /* 设置背景仅填充内容框 */
+  margin-left: 0.5vw;
+  border-radius: 20px;
+  z-index: 10;
+}
+.leftMsg_img{
+    margin-bottom: 10rpx;
+    box-sizing: border-box;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 5%;
+    background-size: cover;
+}
+.rightMsg {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: black;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(270deg, #8EC5FC 12%, #E0C3FC 100%);
+  /* 在右侧添加阴影效果 */ 
+  border-radius: 10rpx;
+  z-index: 10;
+}
+.left_img{
+    width: 11vw; 
+    height: 11vw; 
+    border-radius: 10rpx;
+}
+.inputRoom {
+    width: 100vw;              
+    min-height: 120rpx;
+    border-top: 1px solid #cdcdcd;
+    background-color: white;
+    position: fixed;
+    /* position: fixed; */
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+    padding-top: 10rpx;
+    margin-bottom: 25rpx;
+  }
+.inputBox{
+    width: 580rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:5rpx solid #f1f1f1;
+    border-radius: 40rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    padding: 0 30rpx;
+}
+.voice_bottom{
+    width: 60rpx; 
+    margin-left: 3.2vw;
+    border-radius: 30rpx;
+    /* border:1rpx solid #f1f1f1; */
+    cursor: pointer;
+}
+.inputBar {
+    display: felx;
+    justify-content: center;
+    width: 500rpx;
+    min-height: 80rpx;
+    line-height: 40rpx;
+    font-size: 40rpx;
+    color: #444;
+    overflow-y: hidden;
+    padding-top: 5rpx;
+  }
+.inputBar_placeHolder{
+      font-size: 40rpx;
+      font-family: '华文宋体';
+      color: #7c7c7c;
+  }
+.btn_submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 75rpx;
+    height: 75rpx;
+    background-color: black; 
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: bold;
+    padding: -10rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 0.3rpx #f1f1f1;  /* 为了更像立方体，在按钮下方加上小小的阴影 */
+    text-shadow: 1rpx 1rpx #f1f1f1; /* 按钮上的文字也以加上小小的阴影 */
+    z-index: 999;
+  }
+
+.send_img{
+    height: 50rpx;
+    width: 50rpx;
+  }
+
+.remindBox{
+      margin-top: 30rpx;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20rpx 20rpx;
+      /* border: 1px red solid; */
+      display: flex;
+      justify-content: space-between;
+      /* justify-content: space-around; */
+      flex-direction: row;
+      flex-wrap: wrap; 
+  }
+.reminderBlock{
+        box-sizing: border-box;
+        width: 31%;
+        min-height: 150rpx;
+        padding: 5rpx;
+        margin-bottom: 40rpx;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 35rpx;
+        color: #535353;
+        border:2px #f1f1f1 solid;
+        border-radius: 30rpx; /* 圆角 */
+        /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); 立体效果的阴影 */
+    }
+ 
+.reminder1{
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid red; */
+     width:33%;  
+}
+.reminder2{
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid blue; */
+     width:33%;  
+}
+.reminder3{
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid green; */
+     width:33%;  
+}
+.voiceBox{
+    display: flex; 
+    justify-content: center;
+    /* border:1px solid red; */
+    box-sizing: border-box;
+    width:100%;
+    position: fixed;
+    bottom: 100px;
+    z-index: 99;
+}
+.loading{
+    display: none;
+    vertical-align: middle;
+    margin-bottom: 50rpx;
+}
+.loading{
+    display: inline-block;
+}
+.loading > view{
+    display: inline-block;
+    vertical-align: middle;
+    width: 12rpx;
+    background-color: #006EFF;
+    margin-right: 16rpx;
+    border-radius:50rpx;
+}
+.loading > view:last-child{
+    margin-right: 0;
+}
+.line1{
+    animation: lines 0.5s infinite ease-in-out alternate;
+}
+.line2{
+    animation: lines 0.3s infinite ease-in-out alternate;
+}
+.line3{
+    animation: lines 0.4s  infinite ease-in-out alternate;
+}
+.line4{
+    animation: lines 0.2s  infinite ease-in-out alternate;
+}
+.line5{
+    animation: lines 0.6s infinite ease-in-out alternate;
+}
+
+@keyframes lines {
+    from,10% {
+        height: 4rpx;
+    }
+    to,90%{
+        height: 60rpx;
+    }
+}
+@-webkit-keyframes lines {
+    from,10% {
+        height: 4rpx;
+    }
+    to,90%{
+        height: 60rpx;
+    }
+}

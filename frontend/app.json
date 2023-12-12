@@ -1,0 +1,15 @@
+
+{
+  "lazyCodeLoading": "requiredComponents",
+  "pages":[
+    "pages/index/index",
+    "pages/chat/chat"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影知识问答系统",
+    "navigationBarTextStyle":"black"
+  }
+  
+}
