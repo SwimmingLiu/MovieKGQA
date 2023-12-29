@@ -1,0 +1,20 @@
+//从CSV加载数据，然后存入数据库
+LOAD CSV WITH HEADERS  FROM "file:///genre.csv" AS line
+MERGE (g:Genre{id:toInteger(line.id),name:line.name})
+
+LOAD CSV WITH HEADERS FROM 'file:///actor.csv' AS line
+MERGE (a:Actor { id:toInteger(line.id), birthday:COALESCE(line.birthday, "None"), image:COALESCE(line.image, "None"),
+deathday:COALESCE(line.deathday, "None"), name:line.name, english_name:COALESCE(line.english_name, "None"),
+biography:COALESCE(line.biography, "None"),birthplace:COALESCE(line.birthplace, "None")})
+
+LOAD CSV WITH HEADERS  FROM "file:///movie.csv" AS line
+MERGE (m:Movie{id:toInteger(line.id), name:line.name, introduction:line.introduction, rating:toFloat(line.rating),
+release_date:line.release_date, image:line.image})
+
+LOAD CSV WITH HEADERS FROM "file:////actor_movie.csv" AS line
+match (from:Actor{id:toInteger(line.actor_id)}),(to:Movie{id:toInteger(line.movie_id)})
+merge (from)-[r:STARS_IN{id:toInteger(line.actor_id),id:toInteger(line.movie_id)}]->(to)
+
+LOAD CSV WITH HEADERS FROM "file:///movie_genre.csv" AS line
+match (from:Movie{id:toInteger(line.movie_id)}),(to:Genre{id:toInteger(line.genre_id)})
+merge (from)-[r:BELONGS_TO{id:toInteger(line.movie_id),id:toInteger(line.genre_id)}]->(to)
