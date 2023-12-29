@@ -353,7 +353,7 @@ pageScrollToBottom: function() {
               msgList.push({
                 speaker:  'server',
                 contentType: 'text',
-                content: res.data + "-------(made by chatgpt)"
+                content: res.data + "(made by chatgpt)"
               })
               //调用set方法，告诉系统数据已经改变   启动循环，循环聊天信息
               that.setData({
@@ -417,7 +417,7 @@ pageScrollToBottom: function() {
               
               let data = res.data;
               if (res.statusCode == 200 && typeof(res.data.answer) == "string"){
-                  if (res.data.answer.includes("没有找到答案。")){
+                  if (res.data.answer.includes("没有找到答案。") || res.data.answer.includes("抱歉，我无法理解这个问题")){
                         that.gptRequest(inputvalue);
                         return -1;
                   }else{
