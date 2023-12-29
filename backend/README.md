@@ -12,9 +12,9 @@
 - **spider**
 
   - *generate_userdict.py  生成用户字典，作用：导入jieba进行词性标注，进而提取关键词*
-- *main_x.py  爬虫代码，生成movie.csv和actor.csv文件*
+  - *main_x.py  爬虫代码，生成movie.csv和actor.csv文件*
   - *process_data.py  根据爬虫结果，生成需要的文件，可将其导入至Neo4j*
-- *database_x  包含最终的结果文件和导入Neo4j的CQL语句*
+  - *database_x  包含最终的结果文件和导入Neo4j的CQL语句*
 
 ​	
 
