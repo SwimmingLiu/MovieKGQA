@@ -38,6 +38,16 @@ function initData(that) {
   inputVal = '';
  
   msgList = [
+    // {
+    //   speaker: 'server',
+    //   contentType: 'text',
+    //   content: '您好，我是您的电影知识问答助手。您可以随意问我与电影相关的问题，例如“成龙是谁？”'
+    // },
+    // {
+    //   speaker: 'customer',
+    //   contentType: 'text',
+    //   content: '好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的好的'
+    // }
   ]
   showReminder = true;
   that.setData({
@@ -205,9 +215,9 @@ Page({
     resultText = '';
     const params = {
       // 用户参数
-      secretkey: '', //密钥
-      secretid:  '', //密钥id
-      appid: 0,		 //appid
+      secretkey: '',
+      secretid:  '',
+      appid: 0,
       // 录音参数
       // duration: 100000,
       // frameSize: 1.28,  //单位:k
@@ -343,7 +353,7 @@ pageScrollToBottom: function() {
               msgList.push({
                 speaker:  'server',
                 contentType: 'text',
-                content: res.data
+                content: res.data + "-------(made by chatgpt)"
               })
               //调用set方法，告诉系统数据已经改变   启动循环，循环聊天信息
               that.setData({
@@ -407,11 +417,17 @@ pageScrollToBottom: function() {
               
               let data = res.data;
               if (res.statusCode == 200 && typeof(res.data.answer) == "string"){
-                msgList.push({
-                    speaker:  'server',
-                    contentType: 'text',
-                    content: res.data.answer,
-                  })
+                  if (res.data.answer.includes("没有找到答案。")){
+                        that.gptRequest(inputvalue);
+                        return -1;
+                  }else{
+                    msgList.push({
+                        speaker:  'server',
+                        contentType: 'text',
+                        content: res.data.answer,
+                      })
+                  }
+
                 //调用set方法，告诉系统数据已经改变   启动循环，循环聊天信息
               }else if (res.statusCode == 200 && typeof(res.data.answer) == "object"){
                 msgList.push({
